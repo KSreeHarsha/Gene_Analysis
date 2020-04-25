@@ -14,11 +14,7 @@ import numpy as np
 import itertools
 import optparse
 
-
-
-
 class GeneAnalysis(object):
-
 
     def create_writer(self):
         ''' Creates result file for given dataset file
@@ -60,7 +56,6 @@ class GeneAnalysis(object):
         self.file.write('--------------------------\n')
         self.file.write(string)
         self.file.write('\n\n')
-
 
 
     def get_unique_genes(self):
@@ -130,9 +125,11 @@ class GeneAnalysis(object):
 if __name__ == '__main__':
 
     ''' run the program as python geneAnalysis.py 'data_set_HL60_U937_NB4_Jurkat.txt' '''
+    
     # Parse command line arguments and options.
     usage = 'usage: %prog fileName'
     description = 'Gene analysis for cell lines, results are written to result_dataset--.txt'
+    
     p = optparse.OptionParser(usage=usage, description=description)
 
     (opts, args) = p.parse_args()
